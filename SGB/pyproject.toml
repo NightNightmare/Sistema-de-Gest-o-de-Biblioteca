@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "sgb"
+version = "0.1.0"
+description = ""
+authors = ["Ângelo Vaz <angelovaz2001@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.105.0"
+asyncpg = "^0.29.0"
+uvicorn = {extras = ["standard"], version = "^0.24.0.post1"}
+pydantic = {extras = ["dotenv"], version = "^2.5.2"}
+pydantic-settings = "^2.1.0"
+tortoise-orm = "^0.20.0"
+aerich = "^0.7.2"
+
+
+
+[tool.aerich]
+tortoise_orm = "database.TORTOISE_ORM"
+location = "./migrations"
+src_folder = "./."
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
