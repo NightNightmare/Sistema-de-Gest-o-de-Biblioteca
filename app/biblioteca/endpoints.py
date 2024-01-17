@@ -52,5 +52,5 @@ async def update_livros(id: int, LivroIn: LivroIn):
 
 @livro_endpoint.delete("/{id}")
 async def delete_livros(id: int):
-    
+
     return await delete_livro(id)
